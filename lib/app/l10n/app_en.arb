@@ -1,0 +1,12 @@
+{
+    "hello": "Hello",
+    "confirm_password": "Confirm password",
+    "signup": "SignUp",
+    "signin": "SignIn",
+    "forgot_password": "Forgot password", 
+    "do_you_want_to_try_it": "Do you want to try it!",
+    "try_now": "Try now", 
+    "email": "Email",
+    "remember_password": "Remember password",
+    "password": "Password"
+} 
