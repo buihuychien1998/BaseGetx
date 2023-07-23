@@ -24,17 +24,12 @@ class AuthenticationView extends StatefulWidget {
 class _AuthenticationViewState extends State<AuthenticationView> with SingleTickerProviderStateMixin {
   late final AuthenticationController controller;
   late final TabController tabController;
-  late final List<Tab> listTabBar;
 
   @override
   void initState() {
     // Printt.white("init AuthenticationView");
-    listTabBar = [
-      Tab(text: S.of(context).signin),
-      Tab(text: S.of(context).signup),
-      Tab(text: S.of(context).forgot_password),
-    ];
-    tabController = TabController(length: listTabBar.length, vsync: this);
+
+    tabController = TabController(length: 3, vsync: this);
     //
     controller = Get.find<AuthenticationController>();
 
@@ -98,7 +93,11 @@ class _AuthenticationViewState extends State<AuthenticationView> with SingleTick
                             labelColor: Theme.of(context).colorScheme.primary,
                             labelStyle: const TextStyle(fontWeight: FontWeight.bold),
                             unselectedLabelColor: Theme.of(context).colorScheme.inverseSurface.withOpacity(0.5),
-                            tabs: listTabBar,
+                            tabs: [
+                              Tab(text: S.of(context).signin),
+                              Tab(text: S.of(context).signup),
+                              Tab(text: S.of(context).forgot_password),
+                            ],
                           ),
                         ),
                         SizedBox(
